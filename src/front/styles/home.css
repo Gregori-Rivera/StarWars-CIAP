@@ -1,7 +1,66 @@
-/*
-    home.css: This website contains selectors only used in home.css
+#single {
+  background-color: #317ac7;
+  border: solid navy 2px;
+  color: ghostwhite;
+}
+.card-body {
+  background-color: #145da0;
+}
+.card {
+  border: solid #0000ff 2px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.buttonCards {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  height: 50px;
+  width: 150px;
+  margin-left: 20px;
+}
+.fav {
+  margin-right: 20px;
+}
+.container {
+  margin-top: 25px;
+}
+.carousel-c {
+  height: auto;
+  width: 100%;
+  border: none;
+  background-color: white;
+  overflow-x: scroll;
+}
+.Characters {
+  height: auto;
+  display: flex;
+}
+.carousel-p {
+  height: auto;
+  width: 100%;
+  border: none;
+  background-color: white;
+  overflow-x: scroll;
+}
 
-    All pages share the styles on index.css but you should create 
-    one more css for each page that will contain the selected used 
-    on that page only (the ones not reused in other pages).
-*/
+.Planets {
+  height: auto;
+  display: flex;
+}
+
+.carousel-v {
+  height: auto;
+  width: 100%;
+  border: none;
+  background-color: white;
+  overflow-x: scroll;
+}
+
+.Vehicles {
+  height: auto;
+  display: flex;
+}
