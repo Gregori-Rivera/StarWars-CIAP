@@ -4,7 +4,7 @@ import { Context } from "../store/appContext";
 
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
-  const navigate = useNavigate();
+//   const navigate = useNavigate();
   return (
     <nav className="navbar navbar-dark bg-dark">
       

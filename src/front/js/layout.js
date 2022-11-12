@@ -10,7 +10,7 @@ import { PageVehicles } from "./pages/pageVehicles";
 
 import injectContext from "./store/appContext";
 
-// import { Navbar } from "./component/navbar";
+import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
 //create your first component
@@ -23,7 +23,7 @@ const Layout = () => {
     <div>
       <BrowserRouter basename={basename}>
         <ScrollToTop>
-          {/* <Navbar /> */}
+          <Navbar />
           <Routes>
             {/* enrutamiento asignamos la url con extencion a cada componente del sitio */}
             <Route element={<Home />} path="/" />
