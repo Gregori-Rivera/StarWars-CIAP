@@ -5,6 +5,7 @@ import { Cards } from "../component/cards";
 import { Planets } from "../component/planets";
 import { Vehicles } from "../component/vehicles";
 
+
 export const Home = () => {
   const { store, actions } = useContext(Context);
   //characters
@@ -41,7 +42,11 @@ export const Home = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container"  
+      // backgroundSize: "cover",
+      // height: "270px", 
+    >
+      
       <div>
         <h2>Characters</h2>
         <div className="carousel-c">
