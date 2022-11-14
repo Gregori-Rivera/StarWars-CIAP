@@ -11,7 +11,8 @@
 }
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around !important;
+  padding: 5px;
 }
 .buttonCards {
   display: flex;
@@ -30,7 +31,7 @@
 }
 .carousel-c {
   height: auto;
-  width: 100%;
+  width: 90%;
   border: none;
   background-color: white;
   overflow-x: scroll;
@@ -41,7 +42,7 @@
 }
 .carousel-p {
   height: auto;
-  width: 100%;
+  width: 90%;
   border: none;
   background-color: white;
   overflow-x: scroll;
@@ -54,7 +55,7 @@
 
 .carousel-v {
   height: auto;
-  width: auto;
+  width: 90%;
   border: none;
   background-color: white;
   overflow-x: scroll;

@@ -1,52 +1,58 @@
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
-//   const navigate = useNavigate();
+  //   const navigate = useNavigate();
   return (
-    <nav className="navbar navbar-dark bg-dark">
-      
-        <Link to="/">
-          <img
-            src="https://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG6.png"
-            className="logo"
-          ></img>
-        </Link>
-        <div  className="fav ml-auto nav-item dropdown btn-group">
-          <button className="btn btn-success dropdown-toggle"
-                  id="navbarScrollingDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false">
-            <strong>  
-              Favorites (
-                {store.favorites.length > 0 ? store.favorites.length : 0})
-            </strong>
-          </button>
-          
-          {/* map boton favoritos al boton del nav */}
-          <ul className="dropdown-menu"
-              aria-labelledby="navbarScrollingDropdown">
-                {store.favorites.map((fav) => {
-                  return (
-                    <li key={fav.name}>
-                      <a href="#" className="dropdown-item">
-                        {fav.name}{" "}
-                        <button type="button"
-                          class="btn btn-success mx-1"
-                          onClick={(event) => actions.toggleFavorite(fav)} >
-                            <i class="fa-solid fa-delete-left"></i>
-                        </button>
-                      </a>
-                    </li>
-                  )
-                })}
-          </ul>
-        </div>
-      
-        {/* <div className="btn-group">
+    <nav className="nav navbar-dark bg-dark">
+      <Link to="/">
+        <img
+          src="https://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG6.png"
+          className="logo"
+        ></img>
+      </Link>
+      <div className="fav ml-auto nav-item dropdown btn-group">
+        <button
+          className="btn btn-success dropdown-toggle"
+          id="navbarScrollingDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <strong>
+            Favorites ({store.favorites.length > 0 ? store.favorites.length : 0}
+            )
+          </strong>
+        </button>
+
+        {/* map boton favoritos al boton del nav */}
+        <ul
+          className="dropdown-menu"
+          aria-labelledby="navbarScrollingDropdown"
+        >
+          {store.favorites.map((fav) => {
+            return (
+              <li key={fav.name}>
+                <a href="#" className="dropdown-item">
+                  {fav.name}{" "}
+                  <button
+                    type="button"
+                    class="btn btn-danger mx-1"
+                    onClick={(event) => actions.toggleFavorite(fav)}
+                  >
+                    <i class="fa-ligth fa-trash-can"> </i>
+                  </button>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+
+      {/* <div className="btn-group">
           <button type="button" className="btn btn-danger">
             favorite {store.favorites.lenght}
           </button>
@@ -77,7 +83,6 @@ export const Navbar = () => {
             })}
           </ul>
         </div> */}
-      
     </nav>
   );
 };
